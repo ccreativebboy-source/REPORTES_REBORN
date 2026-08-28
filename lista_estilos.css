@@ -33,6 +33,7 @@
     border-radius: 3px;
 }
 
+/* Número o indicador visual de la sección */
 .presentacionhistorial {
     max-width: 720px;
     margin-bottom: 45px;
@@ -55,7 +56,7 @@
     color: #b8b8b8;
     line-height: 1.6;
 }
-
+/* Lista que agrupa las diferentes categorías */
 .listacategorias {
     display: flex;
     flex-direction: column;
@@ -65,7 +66,7 @@
 .bloquecategoria {
     border-top: 2px solid var(--gold);
 }
-
+/* Botón desplegable para expandir o contraer categorías */
 .botoncategoria {
     width: 100%;
     border: 0;
@@ -83,7 +84,7 @@
     text-transform: uppercase;
     cursor: pointer;
 }
-
+/* Indica la cantidad de reportes por categoría */
 .cantidadcategoria {
     color: var(--gold);
     font-family: 'Open Sans', sans-serif;
