@@ -42,12 +42,9 @@ body {
 /* Añadir a index.css si no las tienes */
 .pantallacompletalogin {
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100vw;
     height: 100vh;
     background-color: #0d0d13;
-    z-index: 99999;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -57,6 +54,7 @@ body {
     letter-spacing: 2px;
     transition: opacity 0.4s ease, visibility 0.4s ease;
     box-sizing: border-box;
+    
 }
 
 /* Añade esta regla si la pantalla se oculta solo con clases o cambios de opacidad */
@@ -66,6 +64,8 @@ body {
 
 .cajatextofondo {
     position: fixed;
+    margin-left: 0px;
+    margin-right: 0px;
     top: 0; 
     left: 0; 
     width: 100vw; 
@@ -81,8 +81,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
-    font-size: 4.5rem;
+    font-size: 3.5rem;
     color: #3b82f6;
     white-space: nowrap;
     line-height: 1.3;
@@ -246,9 +245,7 @@ CABECERA Y NAVEGACIÓN
     width: 38px;
     height: 38px;
     border-radius: 50%;
-    border: 2px solid var(--gold);
     overflow: hidden;
-    background: #0d1117;
     transition: transform 0.2s ease;
 }
 
@@ -388,6 +385,7 @@ MODALES Y FORMULARIOS (LOGIN & REPORTES)
 .pantallacompletalogin {
     opacity: 1;
     pointer-events: all;
+    background: #0f172a;
 }
 
 #report-screen.is-open,
@@ -398,17 +396,24 @@ MODALES Y FORMULARIOS (LOGIN & REPORTES)
 }
 
 .cajatextofondo {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+    position: fixed;
+    top: -50px;
+    left: 0;
+    width: 105vw;
+    height: 105vh;
+    z-index: -1; /* Va detrás de TODO el contenido */
     overflow: hidden;
-    opacity: 0.04;
-    user-select: none;
+    opacity: 0.09; /* Muy suave para no interferir */
     pointer-events: none;
+    user-select: none;
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
-    font-size: 2rem;
-    line-height: 1.5;
+    font-size: 3rem;
+    line-height: 1.3;
+    white-space: wrap;
+    background: -webkit-linear-gradient( #5e92c275, #66e3e7, #5e92c275);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 /* ASIGANDO PARA MILA ; altura de la caja de reporte de index LISTOO */
 .tarjetitamodal {
@@ -490,6 +495,7 @@ MODALES Y FORMULARIOS (LOGIN & REPORTES)
     font-size: 0.75rem;
     font-weight: bold;
     color: var(--gold);
+    margin-bottom:13px;
 }
 
 .archivosdesactivados {
@@ -784,13 +790,11 @@ MODALES Y FORMULARIOS (LOGIN & REPORTES)
     border-radius: 50% !important;
     object-fit: cover !important;
     flex-shrink: 0;
-    border: 1px solid var(--gold, #ffcc00);
 }
 
 /*Solucionar padding a 0: Asignado para Nicolas Mesa*/
 .avatargris,
 .tabladelideres td img.avatargris {
-    padding: 5px;
     border-color: #777 !important;
     background: #343943;
     filter: grayscale(1);

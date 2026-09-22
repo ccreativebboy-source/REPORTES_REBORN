@@ -2,24 +2,30 @@
    CORRECCIONES DE ESTRUCTURA Y LAYOUT
    ========================================== */
 
+.fondo_cuenta {
+    background: #0f172a;
+}
+
 /* 1. Fondo de marquesina corregido (para que no tape nada) */
 .caja-texto-fondo-cuenta {
     position: fixed;
     top: -50px;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 105vw;
+    height: 105vh;
     z-index: -1; /* Va detrás de TODO el contenido */
     overflow: hidden;
-    opacity: 0.03; /* Muy suave para no interferir */
+    opacity: 0.06; /* Muy suave para no interferir */
     pointer-events: none;
     user-select: none;
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
     font-size: 3rem;
-    line-height: 1.2;
+    line-height: 1.3;
     white-space: wrap;
-    color: var(--white, #ffffff);
+    background: -webkit-linear-gradient( #5e92c275, #66e3e7, #5e92c275);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* 2. Contenedor Principal Centrado */
