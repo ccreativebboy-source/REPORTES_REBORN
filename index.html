@@ -5,10 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>REPORTES SIP - CyberTilines</title>
-<!-- Conexion con el css y asi-->
+    <!-- Conexion con el css y asi-->
     <link rel="stylesheet" href="paginaProyecto_CYBERTILINES.css" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"/>
-<!-- Imagen del logo de la pagina y conexion con otro CSS-->
+    <!-- Imagen del logo de la pagina y conexion con otro CSS-->
     <link rel="icon" href="Archivos/imagen/REPORTES_LOGO.png" type="image/png">
     <!-- Carga el script para comprobar el acceso del usuario antes de mostrar la página -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
@@ -96,7 +96,7 @@
     <!-- Fondo de Login -->
     <section id="pantalla-login" class="pantallacompletalogin">
       <figure class="cajatextofondo">
-        <!-- EJEEMM... texto que ya no se mueve por culpa de RODRIGO ROJAS 😡😡😡😡😡😡-->
+
         <span class="textoquemueve">
           <!-- Campos para ingresar al sistema con correo y clave -->
           <span>REPORTES SIP REPORTES SIP REPORTES SIP REPORTES SIP REPORTES SIP</span>
@@ -114,7 +114,7 @@
           <span>REPORTES SIP REPORTES SIP REPORTES SIP REPORTES SIP REPORTES SIP</span>
         </span>
       </figure>
-<!-- Seccion para iniciar sesion osiosi-->
+      <!-- Seccion para iniciar sesion osiosi-->
 
       <div class="tarjetitamodal">
         <h2 id="titulo-form">INICIAR SESIÓN</h2>
@@ -142,7 +142,7 @@
               autocomplete="new-password"
             />
           </div>
-<!-- Contenedor para la opcion "Recordarme"-->
+          <!-- Contenedor para la opcion "Recordarme"-->
           <label class="contenedorrecordar">
             <div class="checkboxcustom">
               <input type="checkbox" id="recordarme" />
@@ -154,7 +154,7 @@
           <button type="button" id="btnLogin" class="botonpaenviar">
             INGRESAR
           </button>
-<!-- Opcion para ir a la seccion de crear cuenta en caso de que no tengas cuenta y asi-->
+          <!-- Opcion para ir a la seccion de crear cuenta en caso de que no tengas cuenta y asi-->
           <p class="textocentrado">
             ¿Eres nuevo?
             <a href="#" id="ir-a-registro">¡Crea tu cuenta aquí!</a>
@@ -194,7 +194,7 @@
               <label>CONTRASEÑA</label>
               
               <!-- Encabezado superior con menú, botones de tema y control de sesión -->
-               <input
+              <input
                 type="password"
                 id="regPassSip"
                 required
@@ -969,7 +969,7 @@
           setReporteMsg("Solo puedes elegir hasta 3 imagenes.", "err");
           return;
         }
-//imagens mas 
+        //imagenes mas 
         for (let i = 0; i < archivosSeleccionados.length; i++) {
           const tiposPermitidos = ["image/jpeg", "image/png", "image/webp"];
 
@@ -978,7 +978,7 @@
             return;
           }
         }
-//enviando reporte subido 
+        //enviando reporte subido 
         const btn = document.getElementById("btnEnviarReporte");
         btn.disabled = true;
         setReporteMsg("Enviando reporte...", "");

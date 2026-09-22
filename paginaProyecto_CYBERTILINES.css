@@ -14,7 +14,7 @@ VARIABLES Y ESTILOS BASE (MODO OSCURO / PREDETERMINADO)
     display: none;
 }
 
-/* Contenedor universal supongo */
+/* Contenedor universal */
 * {
     box-sizing: border-box;
 }
@@ -23,7 +23,7 @@ VARIABLES Y ESTILOS BASE (MODO OSCURO / PREDETERMINADO)
     display: none;
 }
 
-/* Body y pos eso xdxd:V */
+/* Cuerpo de la pagina */
 body {
     margin: 0;
     padding: 0;
@@ -32,7 +32,7 @@ body {
     color: var(--white);
     transition: background-color 0.3s ease, color 0.3s ease;
 }
-
+/* Contenedor principal para centrar contenido */
 .contenedor {
     max-width: 1200px;
     margin: 0 auto;
@@ -76,7 +76,7 @@ body {
     pointer-events: none;
 }
 
-
+/*Texto que se esta moviendo*/
 .textoquemueve {
     display: flex;
     flex-direction: column;
@@ -86,7 +86,6 @@ body {
     white-space: nowrap;
     line-height: 1.3;
 }
-/*Texto que se esta moviendo*/
 
 .textoquemueve span {
     display: block;
@@ -98,7 +97,7 @@ body {
 }
 
 /* ==========================================
-   PANTALLA DE CARGA (LOADING SCREEN)
+    PANTALLA DE CARGA (LOADING SCREEN)
    ========================================== */
 #guard-loading-screen {
     position: fixed;
@@ -217,7 +216,7 @@ CABECERA Y NAVEGACIÓN
     transition: 0.2s ease;
     border-radius: 4px;
 }
-
+/* Efecto visual al pasar el cursor sobre cerrar sesión */
 .botoncerrarsesion:hover {
     background: var(--gold);
     color: #000;
@@ -237,7 +236,7 @@ CABECERA Y NAVEGACIÓN
 }
 
 
-/*Eliminar border y Background, ASIGNADO PARA NICOLAS MESA LIStoO*/
+/*Eliminar border y Background, ASIGNADO PARA NICOLAS MESA X LISTO*/
 .botoncuentaaesthetic {
     display: flex;
     align-items: center;
@@ -354,6 +353,7 @@ CABECERA Y NAVEGACIÓN
     z-index: 150;
 }
 
+/* Activa la capa oscura cuando el panel está abierto */
 .capaoscurapatapar.is-open {
     display: block;
 }
@@ -478,6 +478,7 @@ MODALES Y FORMULARIOS (LOGIN & REPORTES)
     color: #d6d6d6;
 }
 /* ASIGANDO PARA MARKO LISTOO*/
+/* Grid de dos columnas para formularios de registro */
 .grilladeregistro {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -577,6 +578,7 @@ MODALES Y FORMULARIOS (LOGIN & REPORTES)
     color: var(--gold);
 }
 
+/* Botón principal para enviar */
 .botonpaenviar {
     background: var(--gold);
     color: #000;
@@ -610,7 +612,7 @@ MODALES Y FORMULARIOS (LOGIN & REPORTES)
 }
 
 /* ==========================================
-   SECCIÓN HERO E INFORMACIÓN
+    SECCIÓN HERO E INFORMACIÓN
    ========================================== */
 .seccionhero {
     display: grid;
@@ -658,7 +660,7 @@ MODALES Y FORMULARIOS (LOGIN & REPORTES)
 }
 
 /* ==========================================
-   ÁREA DE ACCIÓN (BOTÓN REPORTE)
+    ÁREA DE ACCIÓN (BOTÓN REPORTE)
    ========================================== */
 .areadeaccion {
     text-align: center;
@@ -673,6 +675,7 @@ MODALES Y FORMULARIOS (LOGIN & REPORTES)
     align-items: center;
 }
 
+/* Efectos visuales de iluminación y profundidad en GIFs */
 .gifs {
     /*Sombreado*/
     filter: drop-shadow(0px 5px 2px rgba(0, 8, 31, 0.356));
@@ -704,13 +707,14 @@ MODALES Y FORMULARIOS (LOGIN & REPORTES)
     transition: transform 0.2s, background 0.2s;
 }
 
+/* Efecto visual al interactuar con el botón principal */
 .botonprincipal:hover {
     transform: scale(1.05);
     background: #ffd633;
 }
 
 /* ==========================================
-   TABLA DE LÍDERES (CON SCROLL Y LÍMITE DE 4 FILAS)
+    TABLA DE LÍDERES (CON SCROLL Y LÍMITE DE 4 FILAS)
    ========================================== */
 
 /* 1. Contenedor con altura fija y scroll */
@@ -748,7 +752,7 @@ MODALES Y FORMULARIOS (LOGIN & REPORTES)
     background: transparent;
 }
 
-/* 3. Encabezado fijo al hacer scroll */
+/* 3 Encabezado fijo durante el desplazamiento */
 .tabladelideres th {
     position: sticky;
     top: 0;
@@ -768,7 +772,7 @@ MODALES Y FORMULARIOS (LOGIN & REPORTES)
 }
 
 /* ==========================================
-   CONTROL ESPECÍFICO DE IMÁGENES EN LA TABLA
+    CONTROL ESPECÍFICO DE IMÁGENES EN LA TABLA
    ========================================== */
 
 /* Alineación limpia de la celda de Autor */
@@ -778,7 +782,7 @@ MODALES Y FORMULARIOS (LOGIN & REPORTES)
     gap: 10px;
     white-space: nowrap;
 }
-
+/* Avatar circular del usuario */
 /* Avatar del Autor (fuerza tamaño circular de 32x32px) */
 .avatarautor,
 .tabladelideres .avatarautor,
@@ -792,9 +796,10 @@ MODALES Y FORMULARIOS (LOGIN & REPORTES)
     flex-shrink: 0;
 }
 
-/*Solucionar padding a 0: Asignado para Nicolas Mesa*/
+/*Solucionar padding a 0: Asignado para Nicolas Mesa X LISTO*/
 .avatargris,
 .tabladelideres td img.avatargris {
+    padding: 0px;
     border-color: #777 !important;
     background: #343943;
     filter: grayscale(1);
@@ -812,7 +817,7 @@ MODALES Y FORMULARIOS (LOGIN & REPORTES)
 }
 
 /* ==========================================
-   MIS REPORTES & SOPORTE
+    MIS REPORTES & SOPORTE
    ========================================== */
 .listademisreportes {
     display: flex;
@@ -886,7 +891,7 @@ MODALES Y FORMULARIOS (LOGIN & REPORTES)
     color: #888;
     line-height: 1.4;
 }
-
+/* Animación de parpadeo del cursor */
 /* Cursor interactivo de terminal */
 .cursorparpadea {
     animation: blink 1s infinite;
@@ -907,7 +912,7 @@ MODALES Y FORMULARIOS (LOGIN & REPORTES)
 #reporteMsg.err { color: #f44336; }
 
 /* ==========================================
-   VARIABLES Y ESTILOS MODO CLARO ; Encargado: JOAQUIN SALAMANCA ( 814 - 882 ) LISTOO
+    VARIABLES Y ESTILOS MODO CLARO ; Encargado: JOAQUIN SALAMANCA ( 814 - 882 ) LISTOO
    ========================================== */
 body.light-theme {
     --bg-dark: #faf8f3;
