@@ -1,29 +1,27 @@
-// ==========================================
 // MODO CLARO / MODO OSCURO (INDEX / GLOBAL)
-// ==========================================
-    document.addEventListener('DOMContentLoaded', () => {
-        const themeBtn = document.getElementById('themeBtn');
-        
-        // Cargar preferencia guardada
-        if (localStorage.getItem('theme') === 'light') {
-            document.body.classList.add('light-theme');
-        }
+document.addEventListener('DOMContentLoaded', () => {
+    const themeBtn = document.getElementById('themeBtn');
     
-        if (themeBtn) {
-            themeBtn.addEventListener('click', () => {
-                document.body.classList.toggle('light-theme');
-                const isLight = document.body.classList.contains('light-theme');
-                localStorage.setItem('theme', isLight ? 'light' : 'dark');
-            });
-        }
-    
-        // Inicializar lógica de pestañas si estamos en cuenta.html
-        initCuentaTabs();
-    });
+    // Cargar preferencia guardada en localStorage
+    if (localStorage.getItem('theme') === 'light') {
+        document.body.classList.add('light-theme');
+    }
 
-// ==========================================
+    if (themeBtn) {
+        themeBtn.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+            const isLight = document.body.classList.contains('light-theme');
+            localStorage.setItem('theme', isLight ? 'light' : 'dark');
+        });
+    }
+
+    // Inicializar lógica de pestañas si estamos en cuenta.html
+    if (typeof initCuentaTabs === 'function') {
+        initCuentaTabs();
+    }
+});
+
 // VALIDACIÓN DE RUT
-// ==========================================
     function validarRut(rutCompleto) {
         rutCompleto = rutCompleto.replace(/\./g, '').replace(/-/g, '').toUpperCase();
         if (rutCompleto.length < 8) return false;
@@ -46,9 +44,7 @@
         return dv === dvFinal;
     }
 
-// ==========================================
 // PESTAÑAS Y TEXTO DE FONDO (cuenta.html)
-// ==========================================
     function initCuentaTabs() {
         const tabCuenta = document.getElementById('tab-cuenta');
         const tabSeguridad = document.getElementById('tab-seguridad');
@@ -95,9 +91,7 @@
             actualizarTextoFondo(textoFondo);
         }
 
-// ==========================================
 // CUENTA
-// ==========================================
     actualizarTextoFondo('CUENTA');
 
     tabCuenta.addEventListener('click', () => {
@@ -113,9 +107,7 @@
     });
 }
 
-// ==========================================
 // ANIMACION LOOP DE ICONOS INDEX (integrantes cabezas)
-// ==========================================
     // Arreglo con las rutas locales de tus imágenes
     const imagenes = [
       "Archivos/imagen/Rodrigo.gif",
@@ -162,3 +154,31 @@
 
     // Bucle cada 1 segundo
     setInterval(cambiarImagenes, 2000);
+
+// Mostrar o no Contraseña
+document.addEventListener('click', (e) => {
+    // Buscar si se hizo clic en el botón o en el icono dentro del botón
+    const btn = e.target.closest('.btn-toggle-password, #togglePassword');
+    if (!btn) return;
+
+    // Buscar el contenedor padre común (.contraseñaicono o .grupodeinputs)
+    const contenedor = btn.closest('.contraseñaicono') || btn.closest('.grupodeinputs');
+    if (!contenedor) return;
+
+    // Obtener el campo input de contraseña y el icono de ojo
+    const passwordInput = contenedor.querySelector('input[type="password"], input[type="text"]');
+    const toggleIcon = btn.querySelector('i');
+
+    if (passwordInput) {
+        const isPassword = passwordInput.getAttribute('type') === 'password';
+        
+        // Alternar tipo de input
+        passwordInput.setAttribute('type', isPassword ? 'text' : 'password');
+
+        // Alternar iconos de Bootstrap Icons
+        if (toggleIcon) {
+            toggleIcon.classList.toggle('bi-eye-slash', !isPassword);
+            toggleIcon.classList.toggle('bi-eye', isPassword);
+        }
+    }
+});

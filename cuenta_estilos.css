@@ -11,7 +11,7 @@
     position: fixed;
     top: -50px;
     left: 0;
-    width: 105vw;
+    width: 115vw;
     height: 105vh;
     z-index: -1; /* Va detrás de TODO el contenido */
     overflow: hidden;
