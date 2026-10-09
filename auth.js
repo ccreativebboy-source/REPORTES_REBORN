@@ -1,21 +1,36 @@
 // MODO CLARO / MODO OSCURO (INDEX / GLOBAL)
+
 document.addEventListener('DOMContentLoaded', () => {
     const themeBtn = document.getElementById('themeBtn');
-    
-    // Cargar preferencia guardada en localStorage
-    if (localStorage.getItem('theme') === 'light') {
-        document.body.classList.add('light-theme');
+
+    function actualizarBotonTema() {
+        const esClaro = document.body.classList.contains('light-theme');
+
+        themeBtn.innerHTML = esClaro ? `Modo oscuro <i class="bi bi-moon-fill" aria-hidden="true"></i>` : `Modo claro <i class="bi bi-sun-fill" aria-hidden="true"></i>`;
     }
 
+    // Restaurar el tema guardado
+    const temaGuardado = localStorage.getItem('theme');
+
+    document.body.classList.toggle(
+        'light-theme',
+        temaGuardado === 'light'
+    );
+
     if (themeBtn) {
+        actualizarBotonTema();
+
         themeBtn.addEventListener('click', () => {
-            document.body.classList.toggle('light-theme');
-            const isLight = document.body.classList.contains('light-theme');
-            localStorage.setItem('theme', isLight ? 'light' : 'dark');
+            const esClaro = document.body.classList.toggle('light-theme');
+
+            localStorage.setItem('theme', esClaro ? 'light' : 'dark');
+
+            actualizarBotonTema();
+
+            console.log('Tema cambiado a:', esClaro ? 'light' : 'dark');
         });
     }
 
-    // Inicializar lógica de pestañas si estamos en cuenta.html
     if (typeof initCuentaTabs === 'function') {
         initCuentaTabs();
     }
@@ -107,53 +122,52 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 }
 
-// ANIMACION LOOP DE ICONOS INDEX (integrantes cabezas)
-    // Arreglo con las rutas locales de tus imágenes
+// ANIMACIÓN LOOP DE ICONOS INDEX
+document.addEventListener('DOMContentLoaded', () => {
     const imagenes = [
-      "Archivos/imagen/Rodrigo.gif",
-      "Archivos/imagen/Marko.gif",
-      "Archivos/imagen/Nicolas.gif",
-      "Archivos/imagen/Juanin.gif",
-      "Archivos/imagen/Felix.gif",
+        'Archivos/imagen/Rodrigo.gif',
+        'Archivos/imagen/Marko.gif',
+        'Archivos/imagen/Nicolas.gif',
+        'Archivos/imagen/Juanin.gif',
+        'Archivos/imagen/Felix.gif'
     ];
 
-    const img1 = document.getElementById("imagen1");
-    const img2 = document.getElementById("imagen2");
+    const img1 = document.getElementById('imagen1');
+    const img2 = document.getElementById('imagen2');
 
-    // Voltear la primera imagen horizontalmente
-    img1.style.transform = "scaleX(-1)";
+    // Si esta página no tiene ambas imágenes, no ejecutar el ciclo.
+    if (!img1 || !img2) return;
 
-    // Variables para guardar las imágenes del ciclo anterior
-    let ultimoIndice1 = null;
-    let ultimoIndice2 = null;
+    img1.style.transform = 'scaleX(-1)';
+
+    let ultimoIndice1 = -1;
+    let ultimoIndice2 = -1;
 
     function cambiarImagenes() {
-      let indice1, indice2;
+        let indice1;
+        let indice2;
 
-      // Buscar un indice1 que no sea igual al que acaba de mostrar img1
-      do {
-        indice1 = Math.floor(Math.random() * imagenes.length);
-      } while (indice1 === ultimoIndice1);
+        do {
+            indice1 = Math.floor(Math.random() * imagenes.length);
+        } while (indice1 === ultimoIndice1);
 
-      // Buscar un indice2 que no sea igual al de img1 NI al que acaba de mostrar img2
-      do {
-        indice2 = Math.floor(Math.random() * imagenes.length);
-      } while (indice2 === indice1 || indice2 === ultimoIndice2);
+        do {
+            indice2 = Math.floor(Math.random() * imagenes.length);
+        } while (
+            indice2 === indice1 ||
+            indice2 === ultimoIndice2
+        );
 
-      // Asignar las nuevas imágenes
-      img1.src = imagenes[indice1];
-      img2.src = imagenes[indice2];
+        img1.src = imagenes[indice1];
+        img2.src = imagenes[indice2];
 
-      // Guardar los índices actuales para la siguiente validación
-      ultimoIndice1 = indice1;
-      ultimoIndice2 = indice2;
+        ultimoIndice1 = indice1;
+        ultimoIndice2 = indice2;
     }
 
-    // Cargar la primera vez
     cambiarImagenes();
-
-    // Bucle cada 1 segundo
     setInterval(cambiarImagenes, 2000);
+});
 
 // Mostrar o no Contraseña
 document.addEventListener('click', (e) => {
