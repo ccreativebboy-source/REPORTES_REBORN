@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function actualizarBotonTema() {
         const esClaro = document.body.classList.contains('light-theme');
 
-        themeBtn.innerHTML = esClaro ? `Modo oscuro <i class="bi bi-moon-fill" aria-hidden="true"></i>` : `Modo claro <i class="bi bi-sun-fill" aria-hidden="true"></i>`;
+        themeBtn.innerHTML = esClaro ? `MODO OSCURO <i class="bi bi-moon-fill" aria-hidden="true"></i>` : `MODO CLARO <i class="bi bi-sun-fill" aria-hidden="true"></i>`;
     }
 
     // Restaurar el tema guardado
