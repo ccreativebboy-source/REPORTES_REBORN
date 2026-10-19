@@ -1,10 +1,4 @@
-/* ==========================================
-   CORRECCIONES DE ESTRUCTURA Y LAYOUT
-   ========================================== */
-
-.fondo_cuenta {
-    background: #0f172a;
-}
+/* CORRECCIONES DE ESTRUCTURA Y LAYOUT */
 
 /* 1. Fondo de marquesina corregido (para que no tape nada) */
 .caja-texto-fondo-cuenta {
