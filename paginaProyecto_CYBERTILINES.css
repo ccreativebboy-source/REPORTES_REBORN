@@ -95,9 +95,7 @@ body {
     animation-direction: reverse;
 }
 
-/* ==========================================
-    PANTALLA DE CARGA (LOADING SCREEN)
-   ========================================== */
+/* PANTALLA DE CARGA (LOADING SCREEN) */
 #guard-loading-screen {
     position: fixed;
     top: 0;
@@ -148,11 +146,7 @@ body {
     color: #888;
 }
 
-/*
-==========================================
-CABECERA Y NAVEGACIÓN
-========================================== 
-*/
+/* CABECERA Y NAVEGACIÓN */
 .cabeceraprincipal {
     background-color: var(--sip-blue);
     position: sticky;
@@ -955,6 +949,42 @@ CABECERA Y NAVEGACIÓN
 
 #reporteMsg.ok { color: #4caf50; }
 #reporteMsg.err { color: #f44336; }
+
+.espaciossections {
+    margin: 10px;
+    background-color: #ffdc17; /* color personalizado */
+    border: none;              /* elimina borde por defecto */
+    height: 1px;
+}
+
+footer {
+    margin: 10px;
+    margin-top: 0px;
+    margin-left: 20px;
+    margin-right: 20px;
+    gap: 20px;
+    display:flex;
+    justify-content:space-between;
+}
+
+footer section a {
+    color: white;
+    text-decoration:none;
+    transform: scale(1.00);
+}
+
+footer section a:hover {
+    color: white;
+    text-decoration:underline;
+    transform: scale(1.03);
+}
+
+footer section {
+    gap:10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
 
 /* MODO OSCURO: tema predeterminado */
 
