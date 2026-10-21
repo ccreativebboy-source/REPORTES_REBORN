@@ -982,7 +982,6 @@ footer section a:hover {
 footer section {
     gap:10px;
     display: flex;
-    justify-content: flex-end;
     align-items: center;
 }
 
@@ -1235,4 +1234,907 @@ body:not(.light-theme) {
 body.light-theme {
     background-color: #f8fafc !important;
     color: #1e293b;
+}
+
+/*Responsive seccion*/
+
+/* No modifica HTML ni JavaScript */
+
+/* Evitar desbordamientos horizontales */
+html {
+    width: 100%;
+    overflow-x: clip;
+}
+
+body {
+    width: 100%;
+    min-width: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Contenedor principal */
+.contenedor {
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 20px;
+}
+
+/* HERO: imagen e información */
+.seccionhero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 20px;
+    align-items: center;
+}
+
+.cajadeimagen,
+.columnadeinfo {
+    min-width: 0;
+}
+
+.imagenpapuchadxdd {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.columnadeinfo p {
+    overflow-wrap: anywhere;
+}
+
+/* Área para publicar reportes */
+.areadeaccion {
+    gap: 16px;
+    flex-wrap: wrap;
+    min-width: 0;
+}
+
+.gifs {
+    width: clamp(80px, 18vw, 200px);
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.boton_de_reportes {
+    min-width: 0;
+    flex: 1 1 180px;
+}
+
+.botonprincipal {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+}
+
+/* Tabla de reportes */
+.contenedor-tabla-scroll {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.tabladelideres {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabladelideres th,
+.tabladelideres td {
+    overflow-wrap: anywhere;
+}
+
+.celdaautor {
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+/* Formularios y ventanas */
+.tarjetitamodal {
+    width: min(90%, 470px);
+    max-width: 100%;
+    max-height: 90dvh;
+    overflow-y: auto;
+}
+
+.grilladeregistro {
+    width: 100%;
+    max-width: 100%;
+}
+
+.registrocaja,
+.correocaja,
+.rutcaja {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+.contenidosoporte {
+    flex-wrap: wrap;
+}
+
+/* ==========================================
+   TABLETS Y PANTALLAS PEQUEÑAS
+   ========================================== */
+@media (max-width: 768px) {
+
+    .contenedor {
+        padding-inline: 16px;
+    }
+
+    .contenidocabecera {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding-block: 12px;
+    }
+
+    .areadellogo h1 {
+        font-size: clamp(1.1rem, 4vw, 1.6rem);
+    }
+
+    .seccionhero {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+        margin-block: 24px;
+    }
+
+    .columnadeinfo h3 {
+        font-size: 1.3rem;
+    }
+
+    .itemdeinfo p {
+        font-size: 0.9rem;
+    }
+
+    .areadeaccion {
+        margin-block: 24px;
+        padding: 12px;
+        gap: 10px;
+    }
+
+    .gifs {
+        width: clamp(75px, 16vw, 125px);
+        margin: 8px auto;
+    }
+
+    .textodepregunta {
+        font-size: 1.1rem;
+    }
+
+    .botonprincipal {
+        padding: 13px 20px;
+    }
+
+    .seccionlideres {
+        margin-top: 24px;
+    }
+
+    .tabladelideres th,
+    .tabladelideres td {
+        padding: 10px;
+        font-size: 0.85rem;
+    }
+
+    .avatarautor,
+    .tabladelideres .avatarautor,
+    .tabladelideres td img.avatarautor {
+        width: 28px !important;
+        height: 28px !important;
+        max-width: 28px !important;
+        max-height: 28px !important;
+    }
+}
+
+/* ==========================================
+TELÉFONOS
+   ========================================== */
+@media (max-width: 480px) {
+
+    .contenedor {
+        padding-inline: 12px;
+    }
+
+    .contenidocabecera {
+        gap: 8px;
+    }
+
+    .areadellogo h1 {
+        font-size: 1.05rem;
+    }
+
+    .subtituloxd {
+        font-size: 0.7rem;
+    }
+
+    .botonhamburguesa {
+        padding: 4px;
+    }
+
+    .barritahamburguesa {
+        width: 21px;
+        height: 3px;
+    }
+
+    .botoncerrarsesion {
+        padding: 6px 8px;
+        font-size: 0.65rem;
+    }
+
+    .botoncuentaaesthetic {
+        width: 30px;
+        height: 30px;
+        flex-shrink: 0;
+    }
+
+    .seccionhero {
+        gap: 14px;
+        margin-block: 18px;
+    }
+
+    .columnadeinfo h3 {
+        font-size: 1.15rem;
+    }
+
+    .itemdeinfo h4 {
+        font-size: 0.95rem;
+        margin-top: 12px;
+    }
+
+    .itemdeinfo p {
+        font-size: 0.82rem;
+        line-height: 1.55;
+    }
+
+    .areadeaccion {
+        gap: 6px;
+        padding: 10px 6px;
+        margin-block: 20px;
+    }
+
+    .gifs {
+        width: 68px;
+        margin: 4px auto;
+    }
+
+    .boton_de_reportes {
+        flex: 1 1 130px;
+    }
+
+    .textodepregunta {
+        font-size: 0.95rem;
+    }
+
+    .botonprincipal {
+        padding: 11px 14px;
+        font-size: 0.85rem;
+        margin-block: 8px;
+    }
+
+    .seccionlideres h2 {
+        font-size: 1.1rem;
+    }
+
+    .seccionlideres p {
+        font-size: 0.8rem;
+    }
+
+    .contenedor-tabla-scroll {
+        border-radius: 6px;
+    }
+
+    /* Conserva las columnas y permite deslizar la tabla
+       lateralmente si el teléfono no tiene espacio */
+    .tabladelideres {
+        min-width: 460px;
+    }
+
+    .tabladelideres th,
+    .tabladelideres td {
+        padding: 8px;
+        font-size: 0.75rem;
+    }
+
+    .paneldenavegacion {
+        width: min(280px, 85vw);
+    }
+
+    .enlacemenuxd {
+        max-width: 100%;
+        font-size: 1.1rem;
+    }
+
+    .grilladeregistro {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 10px;
+    }
+
+    .registrocaja,
+    .correocaja,
+    .rutcaja {
+        width: 100%;
+    }
+
+    .contenidosoporte {
+        gap: 12px;
+    }
+
+    .avatarsoporte {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* Reducir animaciones si el dispositivo lo solicita */
+@media (prefers-reduced-motion: reduce) {
+    .cabeceraprincipal,
+    .paneldenavegacion,
+    .botonprincipal {
+        transition: none;
+    }
+}
+
+
+/* =================================================
+   CYBERTILINES — PULIDO RESPONSIVE
+   Compatible con el responsive que ya funciona
+   ================================================= */
+
+/* 1. AJUSTES GENERALES */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.contenidocabecera,
+.contenidocabecera *,
+.seccionlideres,
+.seccionlideres *,
+footer,
+footer * {
+    box-sizing: border-box;
+}
+
+.contenidocabecera {
+    align-items: center;
+}
+
+.contenidocabecera > div {
+    min-width: 0;
+}
+
+#themeBtn,
+#btnCerrarSesion,
+.botoncuentaaesthetic {
+    flex-shrink: 0;
+}
+
+/* 2. ENCABEZADO */
+
+#themeBtn,
+#btnCerrarSesion {
+    min-height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.35;
+    border-radius: 4px;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+#themeBtn:focus-visible,
+#btnCerrarSesion:focus-visible,
+.botonhamburguesa:focus-visible,
+.botoncuentaaesthetic:focus-visible {
+    outline: 2px solid var(--gold, #ffcc00);
+    outline-offset: 3px;
+}
+
+.areadellogo h1 {
+    line-height: 1.2;
+    overflow-wrap: normal;
+}
+
+.subtituloxd {
+    line-height: 1.4;
+}
+
+/* 3. TABLA DE REPORTES */
+
+.seccionlideres {
+    width: 100%;
+    min-width: 0;
+}
+
+.seccionlideres h2 {
+    line-height: 1.35;
+    margin-bottom: 8px;
+}
+
+.seccionlideres > p {
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.contenedor-tabla-scroll {
+    width: 100%;
+    max-width: 100%;
+}
+
+.contenedor-tabla-scroll::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.contenedor-tabla-scroll::-webkit-scrollbar-thumb {
+    background: var(--gold, #ffcc00);
+    border-radius: 8px;
+}
+
+.contenedor-tabla-scroll::-webkit-scrollbar-track {
+    background: #161b22;
+}
+
+.tabladelideres {
+    margin: 0;
+    border-spacing: 0;
+}
+
+.tabladelideres th {
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.tabladelideres td {
+    vertical-align: middle;
+    line-height: 1.45;
+}
+
+.tabladelideres tbody tr {
+    transition: background-color 0.18s ease;
+}
+
+.tabladelideres tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.celdaautor {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+}
+
+.tabladelideres .avatarautor {
+    flex-shrink: 0;
+}
+
+/* 4. PIE DE PÁGINA */
+
+.espaciossections {
+    width: min(1200px, calc(100% - 40px));
+    margin: 28px auto 0;
+    border: 0;
+    border-top: 1px solid rgba(255, 204, 0, 0.22);
+}
+
+footer {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 18px;
+    font-size: 0.82rem;
+    line-height: 1.6;
+}
+
+footer section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 18px;
+    min-width: 0;
+}
+
+footer section:last-child {
+    justify-content: flex-end;
+}
+
+footer article {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+footer a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+footer a:hover {
+    color: var(--gold, #ffcc00);
+    text-decoration: underline;
+}
+
+/* 5. MODO CLARO */
+
+body.light-theme .espaciossections {
+    border-top-color: rgba(71, 85, 105, 0.25);
+}
+
+body.light-theme .contenedor-tabla-scroll {
+    scrollbar-color: #94a3b8 #e2e8f0;
+}
+
+body.light-theme .contenedor-tabla-scroll::-webkit-scrollbar-track {
+    background: #e2e8f0;
+}
+
+body.light-theme footer a:hover {
+    color: #92400e;
+}
+
+/* 6. TABLETS */
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+    .contenidocabecera {
+        gap: 12px;
+    }
+
+    #themeBtn,
+    #btnCerrarSesion {
+        padding: 8px 10px;
+        font-size: 0.75rem;
+    }
+
+    .seccionlideres {
+        margin-top: 26px;
+        margin-bottom: 32px;
+    }
+
+    .tabladelideres th,
+    .tabladelideres td {
+        padding: 10px;
+        font-size: 0.82rem;
+    }
+
+    footer {
+        padding: 18px 16px;
+        gap: 14px;
+    }
+}
+
+/* 7. MÓVILES */
+
+@media (max-width: 480px) {
+
+    .contenidocabecera {
+        gap: 8px;
+    }
+
+    .areadellogo h1 {
+        font-size: clamp(16px, 4.8vw, 21px);
+    }
+
+    #themeBtn,
+    #btnCerrarSesion {
+        min-height: 34px;
+        padding: 6px 8px;
+        font-size: 10px;
+    }
+
+    .seccionlideres {
+        margin-top: 22px;
+        margin-bottom: 28px;
+    }
+
+    .seccionlideres h2 {
+        font-size: 1.05rem;
+    }
+
+    .seccionlideres > p {
+        font-size: 0.78rem;
+    }
+
+    .contenedor-tabla-scroll {
+        border-radius: 6px;
+    }
+
+    /* Conserva las tres columnas sin comprimirlas */
+    .tabladelideres {
+        min-width: 430px;
+        table-layout: auto;
+    }
+
+    .tabladelideres th,
+    .tabladelideres td {
+        padding: 9px 10px;
+        font-size: 0.76rem;
+    }
+
+    .celdaautor {
+        gap: 7px;
+        white-space: nowrap;
+    }
+
+    footer {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+        padding: 16px 12px;
+        font-size: 0.8rem;
+    }
+
+    footer section {
+        justify-content: flex-start;
+        gap: 8px 16px;
+    }
+
+    footer section:last-child {
+        justify-content: space-around;
+        padding-top: 10px;
+        border-top: 1px solid rgba(136, 136, 136, 0.2);
+    }
+
+    .espaciossections {
+        width: calc(100% - 24px);
+        margin-top: 22px;
+    }
+}
+
+/* 8. TELÉFONOS ESTRECHOS */
+
+@media (max-width: 350px) {
+
+    #themeBtn,
+    #btnCerrarSesion {
+        padding: 5px 6px;
+        font-size: 9px;
+    }
+
+    .tabladelideres {
+        min-width: 410px;
+    }
+
+    footer {
+        padding: 12px 8px;
+    }
+}
+
+/* 9. ACCESIBILIDAD */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    #themeBtn,
+    #btnCerrarSesion,
+    footer a,
+    .tabladelideres tbody tr {
+        transition: none;
+    }
+}
+
+
+/* ==============================================
+   CORRECCIÓN FINAL: ENCABEZADO Y TABLA
+   CyberTilines — sin modificar HTML ni JS
+   ============================================== */
+
+/* ==============================================
+   1. ENCABEZADO EN UNA SOLA LÍNEA
+   ============================================== */
+
+.cabeceraprincipal {
+    width: 100%;
+}
+
+.contenidocabecera {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    min-width: 0;
+}
+
+.contenidocabecera > div:first-child {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1 1 auto;
+    min-width: 0;
+    gap: 10px !important;
+}
+
+.contenidocabecera > div:nth-child(2) {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 0 0 auto;
+    min-width: 0;
+    gap: 8px !important;
+}
+
+.areadellogo {
+    flex: 0 1 auto;
+    min-width: 0;
+}
+
+.areadellogo h1 {
+    margin: 0;
+    font-size: clamp(14px, 2vw, 24px);
+    line-height: 1.15;
+    white-space: nowrap;
+}
+
+.areadellogo .subtituloxd {
+    margin-bottom: 0;
+    font-size: clamp(9px, 1vw, 12px);
+    white-space: nowrap;
+}
+
+.botonhamburguesa,
+.botoncuentaaesthetic {
+    flex-shrink: 0;
+}
+
+#themeBtn,
+#btnCerrarSesion {
+    flex-shrink: 0;
+    min-width: 0;
+    gap: 9px;
+    min-height: 34px;
+    padding: 6px 9px;
+    font-size: clamp(9px, 0.9vw, 12px);
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+/* Tablets y móviles */
+@media (max-width: 768px) {
+    .contenidocabecera {
+        gap: 6px;
+        padding-block: 10px;
+    }
+
+    .contenidocabecera > div:first-child {
+        gap: 6px !important;
+    }
+
+    .contenidocabecera > div:nth-child(2) {
+        gap: 5px !important;
+    }
+
+    .areadellogo h1 {
+        font-size: clamp(12px, 3.4vw, 19px);
+    }
+
+    .areadellogo .subtituloxd {
+        font-size: 9px;
+    }
+
+    #themeBtn,
+    #btnCerrarSesion {
+        min-height: 30px;
+        padding: 5px 6px;
+        font-size: 9px;
+    }
+
+    .botoncuentaaesthetic {
+        width: 28px;
+        height: 28px;
+    }
+
+    .barritahamburguesa {
+        width: 19px;
+    }
+}
+
+/* Teléfonos estrechos */
+@media (max-width: 380px) {
+    .contenidocabecera {
+        gap: 4px;
+    }
+
+    .contenidocabecera > div:first-child {
+        gap: 4px !important;
+    }
+
+    .contenidocabecera > div:nth-child(2) {
+        gap: 4px !important;
+    }
+
+    .areadellogo h1 {
+        font-size: 12px;
+    }
+
+    .areadellogo .subtituloxd {
+        font-size: 8px;
+    }
+
+    #themeBtn,
+    #btnCerrarSesion {
+        padding: 4px;
+        font-size: 8px;
+    }
+
+    .botoncuentaaesthetic {
+        width: 25px;
+        height: 25px;
+    }
+
+    .barritahamburguesa {
+        width: 16px;
+    }
+}
+
+/* ==============================================
+   2. TABLA SIN DESPLAZAMIENTO HORIZONTAL
+   ============================================== */
+
+
+/* TABLA: desplazamiento vertical, sin desplazamiento horizontal */
+.contenedor-tabla-scroll {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    max-height: 400px; /* Ajusta la altura visible de la tabla */
+    box-sizing: border-box;
+}
+
+.tabladelideres {
+    width: 100% !important;
+    min-width: 0 !important;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.tabladelideres th,
+.tabladelideres td {
+    overflow-wrap: anywhere;
+    word-break: normal;
+    white-space: normal;
+    box-sizing: border-box;
+}
+
+/* Evita que las imágenes agranden las columnas */
+.tabladelideres img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* En móviles */
+@media (max-width: 480px) {
+    .contenedor-tabla-scroll {
+        max-height: 350px;
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+    }
+
+    .tabladelideres {
+        width: 100% !important;
+        min-width: 0 !important;
+    }
 }
