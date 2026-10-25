@@ -470,17 +470,52 @@
         </div>
       </div>
 
+  <!-- Panel de Soporte-->
       <div id="soporte-screen">
         <div class="tarjetitamodal modalsoporte">
-          <a href="#" class="flechaparatras" id="cerrarSoporte">← VOLVER</a>
-          <h2>SOPORTE</h2>
+          <a href="#" class="flechaparatras" id="cerrarSoporte"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16"> <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/></svg> VOLVER</a>
+            <h2>SOPORTE</h2>
           <div class="contenidosoporte">
             <!-- Redireccionando imagen para que sea visible ; ASIGNADO: SAMIR PEÑA X LISTO-->
             <img class="avatarsoporte" src="Archivos/imagen/REPORTES_LOGO.png" alt="Reportes SIP"/>
             <div class="infosoporte">
-              <h3>CYBERTILINES TEAM</h3>
+              <h3>SIN NOMBRE TEAM</h3>
               <p><strong>Teléfonos:</strong> +56 9 0000 0000</p>
               <p><strong>Correo:</strong> cybertilines@gmail.com</p>
+            </div>
+
+            <div>
+              <form action="/enviar-soporte" method="POST">
+                <fieldset>
+                  <legend>Formulario de Soporte Técnico</legend>
+                
+                  <div>
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                  </div>
+                
+                  <div>
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                  </div>
+                
+                  <div>
+                    <label for="categoria">Tipo de problema:</label>
+                    <select id="categoria" name="categoria">
+                      <option value="fallo">Fallo del sistema</option>
+                      <option value="acceso">Problema de acceso</option>
+                      <option value="otro">Otro</option>
+                    </select>
+                  </div>
+                
+                  <div>
+                    <label for="mensaje">Describe tu problema:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                  </div>
+                
+                  <button type="submit">Enviar solicitud</button>
+                </fieldset>
+              </form>
             </div>
           </div>
           <p class="notasoporte">
