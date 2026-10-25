@@ -219,15 +219,17 @@ body {
     color: var(--gold);
     text-decoration: none;
     font-weight: bold;
-    display: inline-block;
+    align-items:center;
+    gap:5px;
+    display: flex;
     margin-bottom: 15px;
     transition: transform 0.2s;
 }
 
 .flechaparatras:hover {
     transform: translateX(-5px);
+    gap:3px;
 }
-
 
 /*Eliminar border y Background, ASIGNADO PARA NICOLAS MESA X LISTO*/
 .botoncuentaaesthetic {
