@@ -117,6 +117,7 @@ body {
     font-size: 1.1rem;
     color: var(--gold);
     letter-spacing: 2px;
+    text-align: center;
 }
 /*contenedor de la barra de abajo*/
 .contenedorbarra {
@@ -203,7 +204,8 @@ body {
     background: transparent;
     border: 1px solid var(--gold);
     color: var(--gold);
-    padding: 8px 16px;
+    padding: 7px 16px;
+    font-size: 12px;
     font-weight: bold;
     cursor: pointer;
     transition: 0.2s ease;
@@ -317,7 +319,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: color 0.2s;
     gap: 15px;
 }
 
@@ -555,6 +556,7 @@ body {
     padding: 10px;
     border-radius: 4px;
     font-family: inherit;
+    resize: none;
 }
 
 .inputdearchivo {
@@ -752,6 +754,22 @@ body {
 .botonprincipal:hover {
     transform: scale(1.05);
     background: #ffd633;
+}
+
+.soportereporte div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.soportereporte label {
+    font-size: 17px;
+}
+
+.textareaSoporte textarea {
+    resize: none;
+    height: 170px;
 }
 
 /* TABLA DE LÍDERES (CON SCROLL Y LÍMITE DE 4 FILAS) */
@@ -1103,7 +1121,6 @@ body.light-theme .enlacemenuxd {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: color 0.2s;
     gap: 15px;
 }
 
@@ -1354,7 +1371,6 @@ img {
 .registrocaja,
 .correocaja,
 .rutcaja {
-    width: 100%;
     max-width: 100%;
     min-width: 0;
 }
