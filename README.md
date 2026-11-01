@@ -1,5 +1,6 @@
 CyberDesk proyecto:
 # Reportes SIP
+<img src="Archivos/imagen/Ilustracion18.png">
 <h1> INTEGRANTES </h1>
 - Rodrigo Rojas (Programador Principal) <br>
 - Marko Jaramillo (Programador ayudante) <br>
