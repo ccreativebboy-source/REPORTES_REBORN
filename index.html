@@ -351,7 +351,7 @@
         <div id="report-screen">
           <!-- Solucionar altura de Caja (se ve el error en chromebook ; ASIGNADO PARA MILA ) -->
           <div class="tarjetitamodal">
-            <a href="#" class="flechaparatras" id="cerrarReporte">← VOLVER</a>
+            <a href="#" class="flechaparatras" id="cerrarReporte"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16"> <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"></path></svg> VOLVER</a>
             <h2>NUEVO REPORTE</h2>
             <form class="formulariocustom" id="form-reporte">
               <div class="grupodeinputs">
@@ -462,7 +462,7 @@
 
       <div id="mis-reportes-screen">
         <div class="tarjetitamodal" style="max-width: 600px">
-          <a href="#" class="flechaparatras" id="cerrarMisReportes">← VOLVER</a>
+          <a href="#" class="flechaparatras" id="cerrarMisReportes"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16"> <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"></path></svg> VOLVER</a>
           <h2>TUS REPORTES</h2>
           <div class="listademisreportes" id="misReportesLista">
             <p class="tablavacia">Cargando tus reportes...</p>
@@ -485,37 +485,40 @@
             </div>
 
             <div>
-              <form action="/enviar-soporte" method="POST">
+              <hr>
+              <form class="grupodeinputs" action="/enviar-soporte" method="POST">
                 <fieldset>
                   <legend>Formulario de Soporte Técnico</legend>
-                
-                  <div>
-                    <label for="nombre">Nombre completo:</label>
-                    <input type="text" id="nombre" name="nombre" required>
+                  <div class="soportereporte">
+                    <div>
+                      <label for="nombre">Nombre Completo:</label>
+                      <input type="text" id="nombre" name="nombre" required placeholder="Nombre del Estudiante/Docente">
+                    </div>
+                  
+                    <div>
+                      <label for="email">Correo Electrónico:</label>
+                      <input type="email" id="email" name="email" required placeholder="Correo.Instucional@alumnos.sip.cl">
+                    </div>
+                  
+                    <div>
+                      <label for="categoria">Tipo de Problema:</label>
+                      <select id="categoria" name="categoria">
+                        <option value="fallo">Fallo del sistema</option>
+                        <option value="acceso">Problema de acceso</option>
+                        <option value="acceso">Sin Informacion de Avance</option>
+                        <option value="otro">Otro</option>
+                      </select>
+                    </div>
+                  
+                    <div class="textareaSoporte">
+                      <label for="mensaje">Describe tu problema:</label>
+                      <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Mi Reporte..."></textarea>
+                    </div>
                   </div>
-                
-                  <div>
-                    <label for="email">Correo electrónico:</label>
-                    <input type="email" id="email" name="email" required>
-                  </div>
-                
-                  <div>
-                    <label for="categoria">Tipo de problema:</label>
-                    <select id="categoria" name="categoria">
-                      <option value="fallo">Fallo del sistema</option>
-                      <option value="acceso">Problema de acceso</option>
-                      <option value="otro">Otro</option>
-                    </select>
-                  </div>
-                
-                  <div>
-                    <label for="mensaje">Describe tu problema:</label>
-                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-                  </div>
-                
-                  <button type="submit">Enviar solicitud</button>
+                  <button type="submit" class="botonpaenviar">Enviar solicitud</button>
                 </fieldset>
               </form>
+              <hr>
             </div>
           </div>
           <p class="notasoporte">
