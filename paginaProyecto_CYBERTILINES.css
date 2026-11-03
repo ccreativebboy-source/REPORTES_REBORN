@@ -189,13 +189,24 @@ body {
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 7px;
     padding: 5px;
+    transition: 0.5s;
+    
+}
+
+.botonhamburguesa:hover {
+    gap:6px;
+}
+
+.botonhamburguesa:active {
+    transform:scale(0.90);
 }
 
 .barritahamburguesa {
-    width: 25px;
-    height: 3px;
+    width: 30px;
+    height: 4px;
+    border-radius: 3px;
     background-color: var(--gold);
     transition: all 0.3s ease;
 }
@@ -274,6 +285,7 @@ body {
 
 .paneldenavegacion.is-open {
     left: 0;
+    transition: all 0.7s ease;
 }
 
 .barritadearriba {
