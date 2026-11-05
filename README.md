@@ -4,6 +4,6 @@ Trebolitos Proyecto:
 <h1> INTEGRANTES </h1>
 - Rodrigo Rojas (Programador Principal) <br>
 - Marko Jaramillo (Programador ayudante) <br>
-- Joaquin Salamanca (diseñador grafico) <br>
-- Felix Risotto (ilustradora) <br>
+- Joaquin Salamanca (Diseñador grafico) <br>
+- Felix Risotto (Ilustrador) <br>
 - Nicolas Mesa (Verificador/betatester de la web) <br>
