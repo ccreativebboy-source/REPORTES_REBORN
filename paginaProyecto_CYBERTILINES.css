@@ -109,7 +109,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 15px;
-    transition: opacity 0.4s ease, visibility 0.4s ease;
+    transition: opacity 0.9s ease, visibility 0.9s ease;
 }
 /*Titulo d pantalla de carga*/
 .titulocargando {
@@ -1389,6 +1389,9 @@ img {
 
 .contenidosoporte {
     flex-wrap: wrap;
+    display:flex;
+    width:385px;
+    justify-content:center;
 }
 
 /* ==========================================
