@@ -4,7 +4,7 @@
     <!-- Configuración técnica de la página (caracteres, diseño adaptable y fuentes) -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>REPORTES SIP - CyberTilines</title>
+    <title>REPORTES SIP | Los Trebolitos</title>
     <!-- Conexion con el css y asi-->
     <link rel="stylesheet" href="paginaProyecto_CYBERTILINES.css" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"/>
@@ -25,7 +25,7 @@
         <span>// NAVEGACIÓN</span>
         <!-- Enlaces directos para moverse entre las distintas secciones de la plataforma -->
         <div class="titulodelmenu">
-          CYBER<span class="doradito">TILINES</span>
+          Los<span class="doradito">Trebolitos</span>
         </div>
       </div>
       <!--Links de las secciones de las paginas-->
@@ -58,34 +58,15 @@
         </li>
       </ul>
       <!-- poquito de decoracion tipo css y asi :vvv-->
-      <svg 
-        class="decoraciondelesquina"
-        viewBox="0 0 60 60"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M 60 30 L 30 60"
-          stroke="#ffcc00"
-          stroke-width="3"
-          stroke-linecap="square"
-        />
-        <path
-          d="M 15 60 L 34 41"
-          stroke="#ffcc00"
-          stroke-width="3"
-          stroke-linecap="square"
-        />
+      <svg class="decoraciondelesquina" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 60 30 L 30 60" stroke="#ffcc00" stroke-width="3" stroke-linecap="square"/>
+        <path d="M 15 60 L 34 41" stroke="#ffcc00" stroke-width="3" stroke-linecap="square" />
+
         <!-- Pantalla con barra de progreso mientras se comprueban las credenciales -->
-        <path
-          d="M 46 29 L 60 15"
-          stroke="#ffcc00"
-          stroke-width="3"
-          stroke-linecap="square"
-        />
+        <path d="M 46 29 L 60 15" stroke="#ffcc00" stroke-width="3" stroke-linecap="square"/>
       </svg>
       <div class="nav-panel-footer">
-        <div class="textodelamarca">CyberTilines® — Reportes SIP©</div>
+        <div class="textodelamarca">Los Trebolitos® — Reportes SIP©</div>
       </div>
       <!-- Bloque principal con las interfaces de acceso y registro -->
     </nav>
@@ -274,7 +255,7 @@
             <div class="areadellogo">
               <h1>REPORTES <span class="textoamarillo">SIP</span></h1>
               <p class="subtituloxd">
-                Cyber<span class="textoblanco">Tilines</span>
+                Los<span class="textoblanco">Trebolitos</span>
               </p>
             </div>
           </div>
@@ -478,7 +459,7 @@
             <!-- Redireccionando imagen para que sea visible ; ASIGNADO: SAMIR PEÑA X LISTO-->
             <img class="avatarsoporte" src="Archivos/imagen/REPORTES_LOGO.png" alt="Reportes SIP"/>
             <div class="infosoporte">
-              <h3>SIN NOMBRE TEAM</h3>
+              <h3>TREBOLITOS TEAM</h3>
               <p><strong>Teléfonos:</strong> +56 9 0000 0000</p>
               <p><strong>Correo:</strong> cybertilines@gmail.com</p>
             </div>
@@ -539,7 +520,7 @@
         © Nombre de Proyecto
         </article>
         <article>
-        © Nombre del Grupo
+        © Los Trebolitos
         </article>
       </section>
     </footer>
@@ -721,10 +702,13 @@
           guardLoadingScreen.style.display = "flex";
           guardLoadingScreen.style.opacity = "1";
           guardLoadingScreen.style.visibility = "visible";
-        }
+        } setTimeout(() => {
+            guardLoadingScreen.style.display = "none";
+          }, 900);
         signOut(auth).then(() => {
           location.reload();
-        });
+        }
+      );
       };
 
       function mostrarPantallaVerificacion(user, mensaje) {
@@ -825,7 +809,7 @@
           guardLoadingScreen.style.visibility = "hidden";
           setTimeout(() => {
             guardLoadingScreen.style.display = "none";
-          }, 400);
+          }, 900);
         }
 
         if (user && user.emailVerified) {
